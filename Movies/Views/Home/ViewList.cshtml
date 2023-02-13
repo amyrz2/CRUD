@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "All Movies";
+}
+
+<h1>View List</h1>
+
+@model IEnumerable<Movies.Models.ApplicationResponse>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Rating</th>
+            <th>Edited</th>
+            <th>LentTo</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Category</td>
+                <td>@item.Title</td>
+                <td>@item.Year</td>
+                <td>@item.Director</td>
+                <td>@item.Rating</td>
+
+                @if (item.Edited == true)
+                {
+                    <td>Yes</td>
+                }
+
+                @if (item.Edited == false)
+                {
+                    <td>No</td>
+                }
+
+                <td>@item.LentTo</td>
+                <td>@item.Notes</td>
+            </tr>
+        }
+    </tbody>
+</table>
