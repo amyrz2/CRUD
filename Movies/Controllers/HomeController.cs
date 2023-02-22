@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Movies.Models;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Movies.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private MoviesContext dataContext { get; set; }
 
-        private MoviesContext blahContext { get; set; }
-
-        public HomeController(ILogger<HomeController> logger, MoviesContext someName)
+        public HomeController(MoviesContext someName)
         {
-            _logger = logger;
-            blahContext = someName;
+            dataContext = someName;
         }
 
         public IActionResult Index()
@@ -28,7 +28,10 @@ namespace Movies.Controllers
 
         public IActionResult ViewList()
         {
-            var movies = blahContext.responses.ToList();
+            var movies = dataContext.responses
+                .Include(x => x.Category)
+                .OrderBy(x => x.Title)
+                .ToList();
             return View(movies);
         }
 
@@ -46,6 +49,8 @@ namespace Movies.Controllers
         [HttpGet]
         public IActionResult AddMovie()
         {
+            ViewBag.Categories = dataContext.categories.ToList();
+
             return View();
         }
 
@@ -54,20 +59,53 @@ namespace Movies.Controllers
         {
             if (ModelState.IsValid)
             {
-                blahContext.Add(ar);
-                blahContext.SaveChanges();
+                dataContext.Add(ar);
+                dataContext.SaveChanges();
                 return View("Confirmation", ar);
             }
-            return View();
+
+            else //If Invalid
+            {
+                ViewBag.Categories = dataContext.categories.ToList();
+                return View();
+            }
+
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpGet]
+        public IActionResult Edit(int id)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            ViewBag.Categories = dataContext.categories.ToList();
+
+            var application = dataContext.responses.Single(x => x.ApplicationID == id);
+
+            return View("AddMovie", application);
         }
 
+        [HttpPost]
+        public IActionResult Edit(ApplicationResponse blah)
+        {
+            dataContext.Update(blah);
+            dataContext.SaveChanges();
+            return RedirectToAction("ViewList");
+        }
 
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            
+            var application = dataContext.responses.Single(x => x.ApplicationID == id);
+
+            return View(application);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(ApplicationResponse ar)
+        {
+            dataContext.responses.Remove(ar);
+            dataContext.SaveChanges();
+            return RedirectToAction("ViewList");
+        }
     }
 }
 

@@ -1,24 +1,23 @@
-﻿<Properties StartupConfiguration="{85EAE38D-FFFC-48D5-8FAB-D0CFC0268F4F}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="{85EAE38D-FFFC-48D5-8FAB-D0CFC0268F4F}|Default" GitUserInfo="UsingGIT">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Movies/Controllers/HomeController.cs">
     <Files>
-      <File FileName="Movies/Controllers/HomeController.cs" Line="30" Column="10" />
-      <File FileName="Movies/Views/Home/ViewList.cshtml" Line="51" Column="1" />
-      <File FileName="Movies/Views/_ViewImports.cshtml" Line="5" Column="1" />
-      <File FileName="Movies/Views/_ViewStart.cshtml" Line="1" Column="1" />
-      <File FileName="Movies/Views/Home/MyPodcast.cshtml" Line="9" Column="7" />
-      <File FileName="Movies/Models/ErrorViewModel.cs" Line="9" Column="17" />
-      <File FileName="Movies/Models/ApplicationResponse.cs" Line="25" Column="24" />
-      <File FileName="Movies/Migrations/20230213182824_Initial.cs" Line="48" Column="36" />
-      <File FileName="Movies/Models/MoviesContext.cs" Line="44" Column="25" />
-      <File FileName="Movies/Views/Home/AddMovie.cshtml" Line="46" Column="23" />
-      <File FileName="Movies/Migrations/MoviesContextModelSnapshot.cs" Line="1" Column="1" />
-      <File FileName="Movies/Migrations/20230213191931_Initial.cs" Line="1" Column="1" />
+      <File FileName="Movies/Controllers/HomeController.cs" Line="19" Column="2" />
+      <File FileName="Movies/Views/_ViewStart.cshtml" />
+      <File FileName="Movies/Views/Home/MyPodcast.cshtml" />
+      <File FileName="Movies/Models/ApplicationResponse.cs" />
+      <File FileName="Movies/Models/MoviesContext.cs" />
+      <File FileName="Movies/Views/Home/AddMovie.cshtml" />
+      <File FileName="Movies/Migrations/MoviesContextModelSnapshot.cs" />
+      <File FileName="Movies/Views/Home/Index.cshtml" />
+      <File FileName="Movies/obj/Debug/netcoreapp3.1/Movies.Views.pdb" />
+      <File FileName="Movies/obj/Debug/netcoreapp3.1/Movies.TagHelpers.output.cache" />
+      <File FileName="Movies/obj/Debug/netcoreapp3.1/Movies.pdb" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Movies" expanded="True">
+          <Node name="Movies" expanded="True" selected="True">
             <Node name="Movies" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Migrations" expanded="True" />
@@ -34,10 +33,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.Movies PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

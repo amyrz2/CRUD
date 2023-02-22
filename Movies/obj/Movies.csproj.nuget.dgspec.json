@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/amyzhang/Projects/Movies/Movies/Movies.csproj": {}
+    "/Users/amyzhang/Projects/Mission7/Movies/Movies.csproj": {}
   },
   "projects": {
-    "/Users/amyzhang/Projects/Movies/Movies/Movies.csproj": {
+    "/Users/amyzhang/Projects/Mission7/Movies/Movies.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/amyzhang/Projects/Movies/Movies/Movies.csproj",
+        "projectUniqueName": "/Users/amyzhang/Projects/Mission7/Movies/Movies.csproj",
         "projectName": "Movies",
-        "projectPath": "/Users/amyzhang/Projects/Movies/Movies/Movies.csproj",
+        "projectPath": "/Users/amyzhang/Projects/Mission7/Movies/Movies.csproj",
         "packagesPath": "/Users/amyzhang/.nuget/packages/",
-        "outputPath": "/Users/amyzhang/Projects/Movies/Movies/obj/",
+        "outputPath": "/Users/amyzhang/Projects/Mission7/Movies/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/amyzhang/.nuget/NuGet/NuGet.Config"
@@ -70,20 +70,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.osx-x64",
-              "version": "[3.1.32, 3.1.32]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -92,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.405/RuntimeIdentifierGraph.json"
         }
       }
     }

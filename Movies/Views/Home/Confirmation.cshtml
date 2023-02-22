@@ -7,10 +7,9 @@
 
 @model Movies.Models.ApplicationResponse
 
-<h1> Thanks for submitting your movie @Model.Title</h1>
+<h1 class="text-center"> Thanks for submitting your movie, @Model.Title</h1>
 
-
-
-
-<a asp-controller="Home" asp-action="Index" class="btn btn-primary">Homes</a>
-<a asp-controller="Home" asp-action="ViewList" class="btn btn-primary">View All Movies</a>
+<div class="text-center">
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Home</a>
+    <a asp-controller="Home" asp-action="ViewList" class="btn btn-primary">View All Movies</a>
+</div>

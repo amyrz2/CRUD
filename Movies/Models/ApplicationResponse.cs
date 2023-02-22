@@ -9,8 +9,10 @@ namespace Movies.Models
         [Required]
         public int ApplicationID { get; set; }
 
-        [Required(ErrorMessage = "Please enter Category")]
-        public string Category { get; set; }
+        // Foreign key relationship
+        //[Required(ErrorMessage = "Please enter Category")]
+        public int CategoryID { get; set; }
+        public Category Category { get; set; }
 
         [Required(ErrorMessage = "Please enter Title")]
         public string Title { get; set; }
