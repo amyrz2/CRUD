@@ -1379,11 +1379,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/amyzhang/Projects/Mission7/Movies/Movies.csproj",
+      "projectUniqueName": "/Users/amyzhang/Projects/realcrud/Movies/Movies.csproj",
       "projectName": "Movies",
-      "projectPath": "/Users/amyzhang/Projects/Mission7/Movies/Movies.csproj",
+      "projectPath": "/Users/amyzhang/Projects/realcrud/Movies/Movies.csproj",
       "packagesPath": "/Users/amyzhang/.nuget/packages/",
-      "outputPath": "/Users/amyzhang/Projects/Mission7/Movies/obj/",
+      "outputPath": "/Users/amyzhang/Projects/realcrud/Movies/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/amyzhang/.nuget/NuGet/NuGet.Config"

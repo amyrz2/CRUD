@@ -1,8 +1,7 @@
 ﻿<Properties StartupConfiguration="{85EAE38D-FFFC-48D5-8FAB-D0CFC0268F4F}|Default" GitUserInfo="UsingGIT">
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="Movies/Controllers/HomeController.cs">
     <Files>
-      <File FileName="Movies/Controllers/HomeController.cs" Line="19" Column="2" />
+      <File FileName="Movies/Controllers/HomeController.cs" Line="18" Column="1" />
       <File FileName="Movies/Views/_ViewStart.cshtml" />
       <File FileName="Movies/Views/Home/MyPodcast.cshtml" />
       <File FileName="Movies/Models/ApplicationResponse.cs" />
@@ -17,7 +16,7 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Movies" expanded="True" selected="True">
+          <Node name="Movies" expanded="True">
             <Node name="Movies" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Migrations" expanded="True" />
@@ -33,10 +32,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Movies PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Movies PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
