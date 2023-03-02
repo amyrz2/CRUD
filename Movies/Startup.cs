@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Amy Zhang
+// This is a MVC web app for Joel's movie collection.
+// The user is able to view all of his movies, add, edit, and delete movies
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
