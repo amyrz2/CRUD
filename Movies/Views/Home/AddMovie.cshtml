@@ -9,11 +9,12 @@
 
 <h1 class="text-center">If you would like to add a movie, fill out the form below!</h1>
 
-@*Form to add a movie or edit*@
+<!--Form to add a movie or edit-->
 <div>
 
     <form method="post">
 
+        <!--displays all categories as a dropdown -->
         <label asp-for="CategoryID">Category:</label>
         <select class="form-control" asp-for="CategoryID">
             <option value="">Select a Category</option>
@@ -24,18 +25,22 @@
         </select>
         <br />
 
+        <!--Title-->
         <label asp-for="Title">Title:</label>
         <input class="form-control" asp-for="Title" />
         <br />
 
+        <!--Year-->
         <label asp-for="Year">Year:</label>
-        <input class="form-control" min="1880" max="3000" asp-for="Year"/>
+        <input class="form-control" min="1880" max="3000" asp-for="Year" />
         <br />
 
+        <!--Director-->
         <label asp-for="Director">Director:</label>
         <input class="form-control" asp-for="Director" />
         <br />
 
+        <!--Rating-->
         <label asp-for="Rating">Rating:</label>
         <select class="form-control" asp-for="Rating">
             <option value=""> Select a Rating</option>
@@ -46,6 +51,7 @@
         </select>
         <br />
 
+        <!--Edited-->
         <label asp-for="Edited">Edited:</label>
         <select class="form-control" asp-for="Edited">
             <option></option>
@@ -54,14 +60,17 @@
         </select>
         <br />
 
+        <!--LentTo-->
         <label asp-for="LentTo">Lent to:</label>
         <input class="form-control" asp-for="LentTo" maxlength="20" />
         <br />
 
+        <!--Notes can only be 25 characters long-->
         <label asp-for="Notes">Notes:</label>
         <textarea class="form-control" asp-for="Notes" maxlength="25"></textarea>
         <br />
 
+        <!--submit button-->
         <button type="submit">Submit Application</button>
         <br /><br /><br />
 

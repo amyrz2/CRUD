@@ -5,11 +5,13 @@
     ViewData["Title"] = "Delete Application";
 }
 
+<!--Delete Page with buttons to delete or cancel-->
 @model ApplicationResponse
 
 <h2 class="text-center">Confirm Deletion</h2>
 <h3 class="text-center">Are you sure you want to delete the record for @Model.Title?</h3>
 
+<!--Delete button or cancel-->
 <div class="text-center">
     <form method="post" asp-controller="Home" asp-action="Delete">
         <button type="submit">Delete</button>

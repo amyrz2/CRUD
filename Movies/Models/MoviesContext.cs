@@ -8,16 +8,15 @@ namespace Movies.Models
 
 		public MoviesContext (DbContextOptions<MoviesContext> options) : base (options)
 		{
-
 		}
 
 		public DbSet<ApplicationResponse> responses { get; set; }
         public DbSet<Category> categories { get; set; }
 
-
         //seed data
         protected override void OnModelCreating(ModelBuilder mb)
 		{
+            // categories and their associated numbers
             mb.Entity<Category>().HasData(
                 new Category { CategoryID=1, CategoryName= "Action/Adventure" },
                 new Category { CategoryID =2, CategoryName = "Comdey" },
@@ -35,6 +34,8 @@ namespace Movies.Models
                 new Category { CategoryID = 14, CategoryName = "Comdey/Drama" }
 
             );
+
+            // movie entries
 			mb.Entity<ApplicationResponse>().HasData(
 
 				new ApplicationResponse
@@ -74,7 +75,6 @@ namespace Movies.Models
                     LentTo = "",
                     Notes = ""
                 }
-
 
             );
 		}

@@ -7,8 +7,10 @@
 
 @model Movies.Models.ApplicationResponse
 
+<!--Confimration page-->
 <h1 class="text-center"> Thanks for submitting your movie, @Model.Title</h1>
 
+<!--Button to go back to Index page or view all movies-->
 <div class="text-center">
     <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Home</a>
     <a asp-controller="Home" asp-action="ViewList" class="btn btn-primary">View All Movies</a>

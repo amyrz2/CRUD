@@ -21,11 +21,13 @@ namespace Movies.Controllers
             dataContext = someName;
         }
 
+        // index controller that returns view
         public IActionResult Index()
         {
             return View();
         }
 
+        // view all the movies alphabetical by title 
         public IActionResult ViewList()
         {
             var movies = dataContext.responses
@@ -35,17 +37,19 @@ namespace Movies.Controllers
             return View(movies);
         }
 
-
+        // returns view with link to podcast
         public IActionResult MyPodcast()
         {
             return View();
         }
 
+        // BaconSale returns to podcast link
         public IActionResult BaconSale()
         {
             return Redirect("https://baconsale.com");
         }
 
+        // get controller that will list out all the categories and return form
         [HttpGet]
         public IActionResult AddMovie()
         {
@@ -54,6 +58,7 @@ namespace Movies.Controllers
             return View();
         }
 
+        // after user submits, data is added and saved to the db and confirmation page is returned
         [HttpPost]
         public IActionResult AddMovie(ApplicationResponse ar)
         {
@@ -72,6 +77,7 @@ namespace Movies.Controllers
 
         }
 
+        // when user wants to edit a movie, identifies movie by applicationID and displays data in the form
         [HttpGet]
         public IActionResult Edit(int id)
         {
@@ -82,6 +88,7 @@ namespace Movies.Controllers
             return View("AddMovie", application);
         }
 
+        // user clicks save and the row is updated and changes are saved. Brings user back to list of movies 
         [HttpPost]
         public IActionResult Edit(ApplicationResponse blah)
         {
@@ -90,6 +97,7 @@ namespace Movies.Controllers
             return RedirectToAction("ViewList");
         }
 
+        // Displays page confirming user wants to delete
         [HttpGet]
         public IActionResult Delete(int id)
         {
@@ -99,6 +107,7 @@ namespace Movies.Controllers
             return View(application);
         }
 
+        // movie is removed from db and user is brough back to full list of movies
         [HttpPost]
         public IActionResult Delete(ApplicationResponse ar)
         {

@@ -1,10 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
+
 namespace Movies.Models
 {
-	public class ApplicationResponse
+    // Model for each movie entry
+    public class ApplicationResponse
 	{
+        // Application ID primary key
         [Key]
         [Required]
         public int ApplicationID { get; set; }
@@ -26,6 +29,7 @@ namespace Movies.Models
         [Required(ErrorMessage = "Please enter Rating")]
         public string Rating { get; set; }
 
+        // nullable Edited field 
         public bool? Edited { get; set; }
 
         public string LentTo { get; set; }

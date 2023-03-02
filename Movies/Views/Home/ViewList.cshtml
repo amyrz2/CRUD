@@ -1,15 +1,12 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     ViewData["Title"] = "All Movies";
 }
 
-<h1 class="text-center">View Movies List</h1>
-
 @model List<ApplicationResponse>
 
-@*Table to display information*@
+<h1 class="text-center">View Movies List</h1>
+
+<!-- Table to display information -->
 <table class="table table-bordered table-striped background-color:#FFFFFF;">
     <thead>
         <tr>
@@ -26,7 +23,7 @@
         </tr>
     </thead>
 
-    @*Display each row*@
+    <!--Display each row-->
     <tbody>
         @foreach (var item in Model)
         {
@@ -40,6 +37,7 @@
                 <td>@item.LentTo</td>
                 <td>@item.Notes</td>
 
+                <!--Buttons to edit each movie or delete it-->
                 <td><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.ApplicationID">Edit</a></td>
                 <td><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.ApplicationID">Delete</a></td>
 
